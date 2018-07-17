@@ -3,7 +3,7 @@
 ***
 
 <p align="center">
-🎉 Ultra-simplified explanation to design patterns! 🎉
+🎉 超简单的设计模式解释！ 🎉
 </p>
 <p align="center">
 A topic that can easily make anyone's mind wobble. Here I try to make them stick in to your mind (and maybe mine) by explaining them in the <i>simplest</i> way possible.
@@ -16,15 +16,15 @@ A topic that can easily make anyone's mind wobble. Here I try to make them stick
 🚀 Introduction
 =================
 
-Design patterns are solutions to recurring problems; **guidelines on how to tackle certain problems**. They are not classes, packages or libraries that you can plug into your application and wait for the magic to happen. These are, rather, guidelines on how to tackle certain problems in certain situations.
+设计模式是反复出现问题的解决方案； **如何解决某种问题的指导方针**。不是那种你可以直接把它们拖到你的项目中就能等到奇迹发生的类、包或者库。 相反，它们是在某种情况下解决某种问题的指导方针。
 
-> Design patterns are solutions to recurring problems; guidelines on how to tackle certain problems
+> 设计模式是反复出现问题的解决方案; 是如何解决某些问题的指导方针。
 
-Wikipedia describes them as
+[Wikipedia](https://zh.wikipedia.org/wiki/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_(%E8%AE%A1%E7%AE%97%E6%9C%BA)) 中这样描述：
 
-> In software engineering, a software design pattern is a general reusable solution to a commonly occurring problem within a given context in software design. It is not a finished design that can be transformed directly into source or machine code. It is a description or template for how to solve a problem that can be used in many different situations.
+> 在软件工程中，设计模式（design pattern）是对软件设计中普遍存在（反复出现）的各种问题，所提出的解决方案。设计模式并不直接用来完成代码的编写，而是描述在各种不同情况下，要怎么解决问题的一种方案。
 
-⚠️ Be Careful
+⚠️ 注意
 -----------------
 - Design patterns are not a silver bullet to all your problems.
 - Do not try to force them; bad things are supposed to happen, if done so. Keep in mind that design patterns are solutions **to** problems, not solutions **finding** problems; so don't overthink.
@@ -45,8 +45,8 @@ Creational Design Patterns
 In plain words
 > Creational patterns are focused towards how to instantiate an object or group of related objects.
 
-Wikipedia says
-> In software engineering, creational design patterns are design patterns that deal with object creation mechanisms, trying to create objects in a manner suitable to the situation. The basic form of object creation could result in design problems or added complexity to the design. Creational design patterns solve this problem by somehow controlling this object creation.
+Wikipedia 解释
+> 在软件工程中，创建型模式是处理对象创建的设计模式，试图根据实际情况使用合适的方式创建对象。基本的对象创建方式可能会导致设计上的问题，或增加设计的复杂度。创建型模式通过以某种方式控制对象的创建来解决问题。
 
  * [Simple Factory](#-simple-factory)
  * [Factory Method](#-factory-method)
@@ -326,7 +326,7 @@ $door->getDescription();  // Output: I am an iron door
 $expert->getDescription(); // Output: I can only fit iron doors
 ```
 
-As you can see the wooden door factory has encapsulated the `carpenter` and the `wooden door` also iron door factory has encapsulated the `iron door` and `welder`. And thus it had helped us make sure that for each of the created door, we do not get a wrong fitting expert.   
+As you can see the wooden door factory has encapsulated the `carpenter` and the `wooden door` also iron door factory has encapsulated the `iron door` and `welder`. And thus it had helped us make sure that for each of the created door, we do not get a wrong fitting expert.
 
 **When to use?**
 
@@ -791,7 +791,7 @@ class Developer implements Employee
     protected $salary;
     protected $name;
     protected $roles;
-    
+
     public function __construct(string $name, float $salary)
     {
         $this->name = $name;
@@ -1502,7 +1502,7 @@ Command pattern can also be used to implement a transaction based system. Where 
 --------
 
 Real world example
-> An old radio set will be a good example of iterator, where user could start at some channel and then use next or previous buttons to go through the respective channels. Or take an example of MP3 player or a TV set where you could press the next and previous buttons to go through the consecutive channels or in other words they all provide an interface to iterate through the respective channels, songs or radio stations.  
+> An old radio set will be a good example of iterator, where user could start at some channel and then use next or previous buttons to go through the respective channels. Or take an example of MP3 player or a TV set where you could press the next and previous buttons to go through the consecutive channels or in other words they all provide an interface to iterate through the respective channels, songs or radio stations.
 
 In plain words
 > It presents a way to access the elements of an object without exposing the underlying presentation.
@@ -1623,7 +1623,7 @@ Here is the simplest example of a chat room (i.e. mediator) with users (i.e. col
 First of all, we have the mediator i.e. the chat room
 
 ```php
-interface ChatRoomMediator 
+interface ChatRoomMediator
 {
     public function showMessage(User $user, string $message);
 }
@@ -1768,7 +1768,7 @@ $editor->getContent(); // This is the first sentence. This is second.
 😎 Observer
 --------
 Real world example
-> A good example would be the job seekers where they subscribe to some job posting site and they are notified whenever there is a matching job opportunity.   
+> A good example would be the job seekers where they subscribe to some job posting site and they are notified whenever there is a matching job opportunity.
 
 In plain words
 > Defines a dependency between objects so that whenever an object changes its state, all its dependents are notified.
@@ -1954,7 +1954,7 @@ $dolphin = new Dolphin();
 
 $speak = new Speak();
 
-$monkey->accept($speak);    // Ooh oo aa aa!    
+$monkey->accept($speak);    // Ooh oo aa aa!
 $lion->accept($speak);      // Roaaar!
 $dolphin->accept($speak);   // Tuut tutt tuutt!
 ```
@@ -2069,7 +2069,7 @@ $sorter->sort($dataset); // Output : Sorting using quick sort
 💢 State
 -----
 Real world example
-> Imagine you are using some drawing application, you choose the paint brush to draw. Now the brush changes its behavior based on the selected color i.e. if you have chosen red color it will draw in red, if blue then it will be in blue etc.  
+> Imagine you are using some drawing application, you choose the paint brush to draw. Now the brush changes its behavior based on the selected color i.e. if you have chosen red color it will draw in red, if blue then it will be in blue etc.
 
 In plain words
 > It lets you change the behavior of a class when the state changes.
