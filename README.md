@@ -26,24 +26,24 @@ A topic that can easily make anyone's mind wobble. Here I try to make them stick
 
 ⚠️ 注意
 -----------------
-- Design patterns are not a silver bullet to all your problems.
+- 设计模式不是解决所有问题的金科玉律。
 - Do not try to force them; bad things are supposed to happen, if done so. Keep in mind that design patterns are solutions **to** problems, not solutions **finding** problems; so don't overthink.
 - If used in a correct place in a correct manner, they can prove to be a savior; or else they can result in a horrible mess of a code.
 
 > Also note that the code samples below are in PHP-7, however this shouldn't stop you because the concepts are same anyways. Plus the **support for other languages is underway**.
 
-Types of Design Patterns
+设计模式的类型
 -----------------
 
-* [Creational](#creational-design-patterns)
-* [Structural](#structural-design-patterns)
-* [Behavioral](#behavioral-design-patterns)
+* [创建型模式](#creational-design-patterns)
+* [结构型模式](#structural-design-patterns)
+* [行为型模式](#behavioral-design-patterns)
 
-Creational Design Patterns
+创建型模式
 ==========================
 
-In plain words
-> Creational patterns are focused towards how to instantiate an object or group of related objects.
+简单来说
+> 创建型模式关注的是如何实例化一个对象或者一组相关的对象。
 
 Wikipedia 解释
 > 在软件工程中，创建型模式是处理对象创建的设计模式，试图根据实际情况使用合适的方式创建对象。基本的对象创建方式可能会导致设计上的问题，或增加设计的复杂度。创建型模式通过以某种方式控制对象的创建来解决问题。
