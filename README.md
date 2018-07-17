@@ -35,9 +35,9 @@ A topic that can easily make anyone's mind wobble. Here I try to make them stick
 设计模式的类型
 -----------------
 
-* [创建型模式](#creational-design-patterns)
-* [结构型模式](#structural-design-patterns)
-* [行为型模式](#behavioral-design-patterns)
+* [创建型模式](#创建型模式)
+* [结构型模式](#结构型模式)
+* [行为型模式](#行为型模式)
 
 创建型模式
 ==========================
@@ -48,14 +48,14 @@ A topic that can easily make anyone's mind wobble. Here I try to make them stick
 Wikipedia 解释
 > 在软件工程中，创建型模式是处理对象创建的设计模式，试图根据实际情况使用合适的方式创建对象。基本的对象创建方式可能会导致设计上的问题，或增加设计的复杂度。创建型模式通过以某种方式控制对象的创建来解决问题。
 
- * [Simple Factory](#-simple-factory)
- * [Factory Method](#-factory-method)
- * [Abstract Factory](#-abstract-factory)
- * [Builder](#-builder)
- * [Prototype](#-prototype)
- * [Singleton](#-singleton)
+ * [简单工厂模式](#-简单工厂模式)
+ * [工厂方法模式](#-f工厂方法模式)
+ * [抽象工厂模式](#-抽象工厂模式)
+ * [生成器模式](#-生成器模式)
+ * [原型模式](#-原型模式)
+ * [单例模式](#-单例模式)
 
-🏠 Simple Factory
+🏠 简单工厂模式
 --------------
 Real world example
 > Consider, you are building a house and you need doors. It would be a mess if every time you need a door, you put on your carpenter clothes and start making a door in your house. Instead you get it made from a factory.
@@ -119,7 +119,7 @@ echo 'Height: ' . $door->getHeight();
 
 When creating an object is not just a few assignments and involves some logic, it makes sense to put it in a dedicated factory instead of repeating the same code everywhere.
 
-🏭 Factory Method
+🏭 工厂方法模式
 --------------
 
 Real world example
@@ -207,7 +207,7 @@ $marketingManager->takeInterview(); // Output: Asking about community building.
 
 Useful when there is some generic processing in a class but the required sub-class is dynamically decided at runtime. Or putting it in other words, when the client doesn't know what exact sub-class it might need.
 
-🔨 Abstract Factory
+🔨 抽象工厂模式
 ----------------
 
 Real world example
@@ -332,7 +332,7 @@ As you can see the wooden door factory has encapsulated the `carpenter` and the 
 
 When there are interrelated dependencies with not-that-simple creation logic involved
 
-👷 Builder
+👷 生成器模式
 --------------------------------------------
 Real world example
 > Imagine you are at Hardee's and you order a specific deal, lets say, "Big Hardee" and they hand it over to you without *any questions*; this is the example of simple factory. But there are cases when the creation logic might involve more steps. For example you want a customized Subway deal, you have several options in how your burger is made e.g what bread do you want? what types of sauces would you like? What cheese would you want? etc. In such cases builder pattern comes to the rescue.
@@ -439,7 +439,7 @@ $burger = (new BurgerBuilder(14))
 
 When there could be several flavors of an object and to avoid the constructor telescoping. The key difference from the factory pattern is that; factory pattern is to be used when the creation is a one step process while builder pattern is to be used when the creation is a multi step process.
 
-🐑 Prototype
+🐑 原型模式
 ------------
 Real world example
 > Remember dolly? The sheep that was cloned! Lets not get into the details but the key point here is that it is all about cloning
@@ -508,7 +508,7 @@ Also you could use the magic method `__clone` to modify the cloning behavior.
 
 When an object is required that is similar to existing object or when the creation would be expensive as compared to cloning.
 
-💍 Singleton
+💍 单例模式
 ------------
 Real world example
 > There can only be one president of a country at a time. The same president has to be brought to action, whenever duty calls. President here is singleton.
